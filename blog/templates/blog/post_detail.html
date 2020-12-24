@@ -1,5 +1,6 @@
 {% extends 'blog/base.html' %}
 
+
 {% block content %}
 <div class="post">
     <h2>{{ post.title }}</h2>
@@ -10,4 +11,9 @@
     {% endif %}
     <p>{{ post.text|linebreaksbr }}</p>
 </div>
+{% endblock %}
+
+
+{% block go_back %}
+<h1><a href="{% url 'post_list' %}">Go back to previous page</a></h1>
 {% endblock %}
